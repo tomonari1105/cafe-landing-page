@@ -1,14 +1,9 @@
 @charset "UTF-8";
-/*================================================================
-Chrome/Firefox/Edge/Safariなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
-何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
-ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
-================================================================*/
 *,
-::before,
-::after {
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -57,7 +52,6 @@ figcaption {
 ol,
 ul {
   list-style: none;
-  list-style-type: none;
 }
 
 img {
@@ -71,9 +65,29 @@ a {
   text-decoration: none;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  vertical-align: top;
+}
+
 body {
   font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
   letter-spacing: 0.05em;
+  min-width: 375px;
 }
 
 /*ヘッダー*/

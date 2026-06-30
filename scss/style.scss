@@ -27,6 +27,7 @@ $break-points: (
 body {
   font-family: $font-family;
   letter-spacing: 0.05em;
+  min-width: 375px;
 }
 
 /*ヘッダー*/
