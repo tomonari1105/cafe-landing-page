@@ -18,13 +18,13 @@ jQuery(window).on("scroll", function () {
 
 // 画像をクリックすると拡大
 jQuery(".js-img-click").on("click", function () {
-  const src = jQuery(this).find("img").attr("src"); //クリックした画像（this）の src を取る
-  jQuery(".modal-img").attr("src", src); //表示用の画像に入れる
-  jQuery(".modal").addClass("is-active"); //背景にグレー半透明のカラーを目一杯入れる
+  const src = jQuery(this).find("img").attr("src");
+  jQuery(".modal-img").attr("src", src);
+  jQuery(".modal").addClass("is-active");
 });
 
 jQuery(".modal").on("click", function () {
-  jQuery(this).removeClass("is-active"); //カラー(modal)をクリックすることでフェードアウトさせ元に戻す
+  jQuery(this).removeClass("is-active");
 });
 
 // スムーズスクロール
